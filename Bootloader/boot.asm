@@ -59,5 +59,9 @@ start:
 
 
 ; jmp $
+
+
+
+
 times 510-($-$$) db 0 ; add  some 0 bits 
 db 0x55, 0xaa ; adding those fancy bits in the end that makes it boot 
