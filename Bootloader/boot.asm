@@ -34,24 +34,25 @@ int 0x10
 jmp keyboard
 
 keyboard: 
- mov ah, 0x0e
-    mov al, ''
-    int 0x10
-    mov ah, 0x0e
-    mov al, 'i'
-    int 0x10
-    mov ah, 0x0e
-    mov al, 'n'
-    int 0x10
-    mov ah, 0x0e
-    mov al, 'p'
-    int 0x10
-    mov ah, 0x0e
-    mov al, 'u'
-    int 0x10
-    mov ah, 0x0e
-    mov al, 't'
-    int 0x10
+    ; Commented this out for now
+    ;  mov ah, 0x0e 
+    ; mov al, ''
+    ; int 0x10
+    ; mov ah, 0x0e
+    ; mov al, 'i'
+    ; int 0x10
+    ; mov ah, 0x0e
+    ; mov al, 'n'
+    ; int 0x10
+    ; mov ah, 0x0e
+    ; mov al, 'p'
+    ; int 0x10
+    ; mov ah, 0x0e
+    ; mov al, 'u'
+    ; int 0x10
+    ; mov ah, 0x0e
+    ; mov al, 't'
+    ; int 0x10
 
 
 
