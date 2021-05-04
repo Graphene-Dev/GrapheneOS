@@ -4,6 +4,13 @@ output:
     int 0x10
     ret
 
+newLine:
+    mov al, 0xA
+    call output
+    mov al, 0xD
+    call output
+    ret
+
 start:
     mov al, 'G'
     call output
@@ -25,7 +32,7 @@ start:
     call output
     mov al, 'S'
     call output
-
+    call newLine
 
 ; jmp keyboard
 
