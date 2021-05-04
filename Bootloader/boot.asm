@@ -29,7 +29,7 @@ int 0x10
 mov ah, 0x0e 
 mov al, 'S'
 int 0x10
-n_line DB 0AH,0DH,"$"   ;for new line
+
 
 jmp keyboard
 
