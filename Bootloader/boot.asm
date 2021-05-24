@@ -5,6 +5,12 @@ output:
     int 0x10
     ret
 
+enter:
+    call newLine
+    jmp input
+    
+
+
 newLine:
     mov al, 0xA
     call output
@@ -13,6 +19,11 @@ newLine:
     ret
 
 start:
+    mov dh, 0x1c
+
+
+
+
     mov al, 'G'
     call output
     mov al, 'r'
@@ -40,6 +51,9 @@ start:
     input:
         mov ah, 0x00
         int 0x16
+        cmp ah, dh
+        je enter
+        
         call output
     jmp input
 
