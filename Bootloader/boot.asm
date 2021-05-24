@@ -9,7 +9,13 @@ enter:
     call newLine
     jmp input
     
-
+;delete:
+;    call output
+;    mov al, ' '
+;    call output
+;    mov al, 0x53
+;    call output
+;    jmp input
 
 newLine:
     mov al, 0xA
@@ -19,8 +25,7 @@ newLine:
     ret
 
 start:
-    mov dh, 0x1c
-
+   
 
 
 
@@ -51,9 +56,13 @@ start:
     input:
         mov ah, 0x00
         int 0x16
+        mov dh, 0x1c
         cmp ah, dh
         je enter
-        
+        ;mov dh, 0x53
+        ;cmp ah, dh
+        ;je delete
+
         call output
     jmp input
 
