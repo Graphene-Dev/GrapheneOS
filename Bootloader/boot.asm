@@ -35,5 +35,12 @@ start:
     call output
     call newLine
 
+
+    ;read input
+    mov ah, 0x00
+    int 0x16
+    call output
+
+
 times 510-($-$$) db 0 
 db 0x55, 0xaa 
