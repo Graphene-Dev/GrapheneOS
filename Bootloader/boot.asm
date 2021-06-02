@@ -1,14 +1,18 @@
+; go to begining of the program
 jmp start
 
+;output char in register al
 output:
     mov ah, 0x0e 
     int 0x10
     ret
 
+;Create a newline when enterkey is pressed
 enter:
     call newLine
     jmp input
-    
+
+; Make this work later    
 ;delete:
 ;    call output
 ;    mov al, ' '
@@ -17,6 +21,8 @@ enter:
 ;    call output
 ;    jmp input
 
+
+;Create a newline
 newLine:
     mov al, 0xA
     call output
@@ -24,11 +30,8 @@ newLine:
     call output
     ret
 
+;Start of the program
 start:
-   
-
-
-
     mov al, 'G'
     call output
     mov al, 'r'
@@ -66,5 +69,6 @@ start:
         call output
     jmp input
 
+;padding to fill boot disk
 times 510-($-$$) db 0 
 db 0x55, 0xaa 
